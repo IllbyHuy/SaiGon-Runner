@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Ground
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: 1
+    uniqueID: 2892254057
+    locked: 0
+  - name: 2
+    uniqueID: 3405629149
+    locked: 0
+  - name: 3
+    uniqueID: 2511313131
+    locked: 0
+  - name: 4
+    uniqueID: 1373205897
+    locked: 0
+  - name: 5
+    uniqueID: 1334545643
+    locked: 0
+  - name: 6
+    uniqueID: 3481578827
+    locked: 0
+  - name: light 1
+    uniqueID: 795210801
+    locked: 0
+  - name: light 2
+    uniqueID: 1025253337
+    locked: 0
+  - name: train
+    uniqueID: 365813535
+    locked: 0
+  - name: 7
+    uniqueID: 2954370393
+    locked: 0
+  - name: 8
+    uniqueID: 1700363539
+    locked: 0
+  - name: 9
+    uniqueID: 1213487587
+    locked: 0
+  - name: 10
+    uniqueID: 2151073895
+    locked: 0
+  - name: 11
+    uniqueID: 691699265
+    locked: 0
+  - name: 12
+    uniqueID: 1841967519
+    locked: 0
+  m_RenderingLayers:
+  - Default
