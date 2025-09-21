@@ -7,6 +7,10 @@
 [Ll]ogs/
 [Mm]emoryCaptures/
 
+# Unity specific folders
+UserSettings/
+GeneratedAssets/
+
 # Asset Store tools
 [Aa]ssetStoreTools*
 
@@ -38,3 +42,7 @@ sysinfo.txt
 # Ignore build results
 [Bb]uild/
 [Bb]uilds/
+
+# Unity specific files
+*.pidb.meta
+*.meta
