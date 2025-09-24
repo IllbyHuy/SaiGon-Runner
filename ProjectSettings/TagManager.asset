@@ -87,5 +87,8 @@ TagManager:
   - name: 12
     uniqueID: 1841967519
     locked: 0
+  - name: StreetItem
+    uniqueID: 202609749
+    locked: 0
   m_RenderingLayers:
   - Default
