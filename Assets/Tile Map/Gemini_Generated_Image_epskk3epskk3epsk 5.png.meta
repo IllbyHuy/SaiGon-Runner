@@ -37,7 +37,11 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<< HEAD
     filterMode: 0
+=======
+    filterMode: 1
+>>>>>>> 4c2e2f1f02caa4c575b922e99cd7b12da28a03e4
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +55,11 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   spritePixelsToUnits: 16
+=======
+  spritePixelsToUnits: 100
+>>>>>>> 4c2e2f1f02caa4c575b922e99cd7b12da28a03e4
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -116,12 +124,21 @@ TextureImporter:
       name: Gemini_Generated_Image_epskk3epskk3epsk 5_0
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 61
         y: 879
         width: 65
         height: 84
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+=======
+        x: 0
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+>>>>>>> 4c2e2f1f02caa4c575b922e99cd7b12da28a03e4
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -138,7 +155,11 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
+<<<<<<< HEAD
     spriteID: fb461dd948e7cc94790098b47333097e
+=======
+    spriteID: 
+>>>>>>> 4c2e2f1f02caa4c575b922e99cd7b12da28a03e4
     internalID: 0
     vertices: []
     indices: 

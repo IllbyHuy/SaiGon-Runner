@@ -1,0 +1,6 @@
+# Chỉ dùng Unity Smart Merge cho file YAML-based
+*.unity    merge=unityyamlmerge eol=lf
+*.prefab   merge=unityyamlmerge eol=lf
+*.asset    merge=unityyamlmerge eol=lf
+*.meta     merge=unityyamlmerge eol=lf
+*.json merge=theirs
