@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Coin
   - DeathZone
+  - Flag
   layers:
   - Default
   - TransparentFX
@@ -91,6 +92,9 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 3899722069
+    locked: 0
+  - name: OptionsUI
+    uniqueID: 2202005367
     locked: 0
   m_RenderingLayers:
   - Default
