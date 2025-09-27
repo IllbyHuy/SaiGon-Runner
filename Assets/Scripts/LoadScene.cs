@@ -5,8 +5,10 @@ public static class ScenesLoader
 {
     public enum Scene
     {
-        MainMenu,
-        SampleScene
+        MainMenuScenes,
+        GuideScene,
+        Map1 ,           
+        Map2 
     }
 
     public static void LoadScenes(Scene scene)
