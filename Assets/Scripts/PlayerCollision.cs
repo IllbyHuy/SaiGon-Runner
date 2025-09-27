@@ -14,5 +14,9 @@ public class PlayerCollision : MonoBehaviour
             gameManager.AddScore(1);
             Destroy(collision.gameObject);
         }
+        else if(collision.CompareTag("DeathZone"))
+        {
+            gameManager.GameOver();
+        }
     }
 }

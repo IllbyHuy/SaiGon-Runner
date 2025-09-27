@@ -31,7 +31,7 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
-
+.vs/
 # Rider
 .idea/
 *.sln.iml
