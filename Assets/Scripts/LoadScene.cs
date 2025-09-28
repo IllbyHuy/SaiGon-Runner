@@ -8,7 +8,7 @@ public static class ScenesLoader
         MainMenuScenes,
         GuideScene,
         Map1,
-        Map2,
+        Map2v1,
         Map3,
         Map4
     }
