@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private GameObject gameOverUI;
     [SerializeField] private GameObject gameWinUI;
+    [SerializeField] private TextMeshProUGUI finalScoreText;
     private bool isGameOver = false;
     private bool isGameWin = false;
     void Start()
@@ -49,6 +50,7 @@ public class GameManager : MonoBehaviour
         isGameWin = true;
         gameWinUI.SetActive(true);
         Time.timeScale = 0f;
+        finalScoreText.text = "Your score: " + score.ToString();
     }
     public void RestartGame()
     {
