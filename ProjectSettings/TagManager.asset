@@ -8,6 +8,7 @@ TagManager:
   - Coin
   - DeathZone
   - Flag
+  - Traps
   layers:
   - Default
   - TransparentFX
@@ -95,6 +96,12 @@ TagManager:
     locked: 0
   - name: OptionsUI
     uniqueID: 2202005367
+    locked: 0
+  - name: Ground
+    uniqueID: 4219579181
+    locked: 0
+  - name: Player
+    uniqueID: 1383478709
     locked: 0
   m_RenderingLayers:
   - Default
