@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: fda6c77cf442f75419e22bba04a574ea
+guid: af2feaae40b95834a848a15c4c87664c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5579186198594148651
-    second: Platform-and-Objects_0
+      213: 7266399812489971422
+    second: "\u0111\u1EA5t_0"
   - first:
-      213: 3289123232166086288
-    second: Platform-and-Objects_1
+      213: -9194054545655809393
+    second: "\u0111\u1EA5t_1"
   - first:
-      213: 3664970851962570358
-    second: Platform-and-Objects_2
+      213: 2107691111598855661
+    second: "\u0111\u1EA5t_2"
   - first:
-      213: 4558839413801954714
-    second: Platform-and-Objects_3
+      213: 7849597547232190217
+    second: "\u0111\u1EA5t_3"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,106 +105,93 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Platform-and-Objects_0
+      name: "\u0111\u1EA5t_0"
       rect:
         serializedVersion: 2
         x: 0
-        y: 113
-        width: 47
-        height: 15
+        y: 801
+        width: 566
+        height: 710
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5d6a80156bfb292b0800000000000000
-      internalID: -5579186198594148651
+      spriteID: ed60e63612077d460800000000000000
+      internalID: 7266399812489971422
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Platform-and-Objects_1
+      name: "\u0111\u1EA5t_1"
       rect:
         serializedVersion: 2
-        x: 64
-        y: 96
-        width: 16
-        height: 32
+        x: 478
+        y: 700
+        width: 546
+        height: 777
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0968eb3372055ad20800000000000000
-      internalID: 3289123232166086288
+      spriteID: f8abe985a18286080800000000000000
+      internalID: -9194054545655809393
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Platform-and-Objects_2
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 676c36f62979cd230800000000000000
-      internalID: 3664970851962570358
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Platform-and-Objects_3
+      name: "\u0111\u1EA5t_2"
       rect:
         serializedVersion: 2
         x: 0
-        y: 74
-        width: 48
-        height: 6
+        y: 200
+        width: 433
+        height: 503
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a9d27b70b40444f30800000000000000
-      internalID: 4558839413801954714
+      spriteID: de5191326e5004d10800000000000000
+      internalID: 2107691111598855661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u0111\u1EA5t_3"
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 8
+        width: 1022
+        height: 585
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90f5d88516f5fec60800000000000000
+      internalID: 7849597547232190217
       vertices: []
       indices: 
       edges: []
@@ -213,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f06d94fd35a57214693873d58fe49c32
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -221,16 +208,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
-      - key: SpriteEditor.SliceOnImport
-        value: False
+      entries: []
     nameFileIdTable:
-      Platform-and-Objects_0: -5579186198594148651
-      Platform-and-Objects_1: 3289123232166086288
-      Platform-and-Objects_2: 3664970851962570358
-      Platform-and-Objects_3: 4558839413801954714
+      "\u0111\u1EA5t_0": 7266399812489971422
+      "\u0111\u1EA5t_1": -9194054545655809393
+      "\u0111\u1EA5t_2": 2107691111598855661
+      "\u0111\u1EA5t_3": 7849597547232190217
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

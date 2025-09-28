@@ -66,7 +66,50 @@ public class GameManager : MonoBehaviour
     public void NextLevel()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        
+        // Kiểm tra xem có scene tiếp theo không
+        if (currentSceneIndex + 1 < SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(currentSceneIndex + 1);
+        }
+        else
+        {
+            // Nếu không có scene tiếp theo, quay về MainMenu
+            BackToMainMenu();
+        }
+    }
+    
+    public void LoadMap3()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Map3");
+    }
+    
+    public void LoadMap1()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Map1");
+    }
+    
+    public void LoadMap2()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Map2");
+    }
+    
+    public void LoadMap4()
+    {
+        Time.timeScale = 1f;
+        Debug.Log("Chuyển từ Map3 sang Map4 - Cutscene hoàn thành!");
+        SceneManager.LoadScene("Map4");
+    }
+    
+    public void LoadMap4FromCutscene()
+    {
+        Time.timeScale = 1f;
+        Debug.Log("Cutscene Map3 hoàn thành, chuyển sang Map4!");
+        SceneManager.LoadScene("Map4");
     }
     public bool IsGameOver() => isGameOver;
     public bool IsGameWin() => isGameWin;   

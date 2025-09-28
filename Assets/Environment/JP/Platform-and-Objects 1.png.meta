@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fda6c77cf442f75419e22bba04a574ea
+guid: cb7f9778ba886c14cac9b22a9f63ea94
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -125,10 +125,10 @@ TextureImporter:
       name: Platform-and-Objects_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 113
-        width: 47
-        height: 15
+        x: 32
+        y: 96
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,10 +150,10 @@ TextureImporter:
         x: 64
         y: 96
         width: 16
-        height: 32
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 1}
       customData: 
       outline: []
       physicsShape: []
