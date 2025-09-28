@@ -62,7 +62,7 @@ public class MainMenu : MonoBehaviour
                 ScenesLoader.LoadScenes(ScenesLoader.Scene.Map1);
                 break;
             case 2:
-                ScenesLoader.LoadScenes(ScenesLoader.Scene.Map2);
+                ScenesLoader.LoadScenes(ScenesLoader.Scene.Map2v1);
                 break;
             case 3:
                 ScenesLoader.LoadScenes(ScenesLoader.Scene.Map3);
