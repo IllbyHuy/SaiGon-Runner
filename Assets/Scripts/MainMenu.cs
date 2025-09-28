@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEditor.PackageManager.UI;
 
 public class MainMenu : MonoBehaviour
 {
@@ -13,52 +12,60 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         // Phát nhạc menu khi vào Main Menu
+        PlayMenuMusic();
+    }
+
+    private void Awake()
+    {
+        PlayButton.onClick.AddListener(() =>
+        {
+            PlayButtonSound();
+            ScenesLoader.LoadScenes(ScenesLoader.Scene.Map1);
+        });
+
+        ChooseLevelButton.onClick.AddListener(() =>
+        {
+            PlayButtonSound();
+            // Logic choose level
+        });
+
+        ExitButton.onClick.AddListener(() =>
+        {
+            PlayButtonSound();
+            ExitGame();
+        });
+
+        GuideButton.onClick.AddListener(() =>
+        {
+            PlayButtonSound();
+            ScenesLoader.LoadScenes(ScenesLoader.Scene.GuideScene);
+        });
+    }
+
+    #region AUDIO METHODS
+    private void PlayButtonSound()
+    {
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.PlayButtonClickSound();
+        }
+    }
+
+    private void PlayMenuMusic()
+    {
         if (AudioManager.instance != null)
         {
             AudioManager.instance.PlayMenuMusic();
         }
     }
+    #endregion
 
-    private void Awake()
+    private void ExitGame()
     {
-        PlayButton.onClick.AddListener(() => {
-            // Phát âm thanh click button
-            if (AudioManager.instance != null)
-            {
-                AudioManager.instance.PlayButtonClickSound();
-            }
-
-            ScenesLoader.LoadScenes(ScenesLoader.Scene.Map1);
-        });
-
-        ChooseLevelButton.onClick.AddListener(() => {
-            // Phát âm thanh click button
-            if (AudioManager.instance != null)
-            {
-                AudioManager.instance.PlayButtonClickSound();
-            }
-
-            // Logic choose level
-        });
-
-        ExitButton.onClick.AddListener(() => {
-            // Phát âm thanh click button
-            if (AudioManager.instance != null)
-            {
-                AudioManager.instance.PlayButtonClickSound();
-            }
-
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
             Application.Quit();
-        });
-
-        GuideButton.onClick.AddListener(() => {
-            // Phát âm thanh click button
-            if (AudioManager.instance != null)
-            {
-                AudioManager.instance.PlayButtonClickSound();
-            }
-
-            ScenesLoader.LoadScenes(ScenesLoader.Scene.GuideScene);
-        });
+#endif
     }
 }

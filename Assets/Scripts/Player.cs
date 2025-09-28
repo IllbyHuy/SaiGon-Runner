@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        // Phát background music khi player start (nếu cần)
+        // Phát background music khi player start
         if (AudioManager.instance != null)
         {
             AudioManager.instance.PlayBackgroundMusic();
@@ -84,8 +84,7 @@ public class Player : MonoBehaviour
             // Phát âm thanh đi bộ (chỉ khi bắt đầu đi và không chạy)
             if (!wasWalking && !isRunning && isGround && AudioManager.instance != null)
             {
-                // Note: Có thể cần thêm walkSound vào AudioManager nếu muốn
-                // AudioManager.instance.PlayWalkSound();
+                AudioManager.instance.PlayRunSound(); // Dùng tạm runSound cho walking
             }
             wasWalking = true;
         }
@@ -100,19 +99,17 @@ public class Player : MonoBehaviour
         {
             animator.SetTrigger("Attack");
 
-            // Phát âm thanh tấn công (có thể cần thêm vào AudioManager)
-            // if (AudioManager.instance != null)
-            // {
-            //     AudioManager.instance.PlayAttackSound();
-            // }
+            // Phát âm thanh tấn công
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.PlayEnemyHitSound(); // Dùng tạm EnemyHitSound cho attack
+            }
         }
     }
 
     private void FixedUpdate()
     {
         float speed = isRunning ? runSpeed : moveSpeed;
-        // Sử dụng Rigidbody2D để di chuyển thay vì transform.position
-        // Điều này giúp tránh bị stuck khi collision
         rb.linearVelocity = new Vector2(movement * speed, rb.linearVelocity.y);
     }
 
@@ -125,29 +122,20 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
-            // Kiểm tra xem có điểm tiếp xúc nào ở dưới nhân vật không
             bool hasGroundBelow = false;
             foreach (ContactPoint2D contact in collision.contacts)
             {
-                if (contact.point.y < transform.position.y - 0.2f) // Cho phép một chút tolerance
+                if (contact.point.y < transform.position.y - 0.2f)
                 {
                     hasGroundBelow = true;
                     break;
                 }
             }
 
-            // Chỉ set isGround = true khi có ground thực sự ở dưới và đang rơi xuống
             if (hasGroundBelow && rb.linearVelocity.y <= 0.1f)
             {
                 isGround = true;
                 animator.SetBool("Jump", false);
-
-                // Phát âm thanh landing khi chạm đất
-                if (AudioManager.instance != null)
-                {
-                    // Note: Cần thêm landSound vào AudioManager nếu có
-                    // AudioManager.instance.PlayLandSound();
-                }
             }
         }
 
@@ -184,7 +172,6 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
-            // Kiểm tra liên tục khi đang ở trên ground
             bool hasGroundBelow = false;
             foreach (ContactPoint2D contact in collision.contacts)
             {
@@ -207,7 +194,6 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
-            // Luôn set isGround = false khi rời khỏi ground
             isGround = false;
         }
     }
@@ -222,7 +208,6 @@ public class Player : MonoBehaviour
             {
                 AudioManager.instance.PlayCollectSound();
             }
-            // Destroy item
             Destroy(other.gameObject);
         }
 
@@ -235,6 +220,4 @@ public class Player : MonoBehaviour
             }
         }
     }
-
-    
 }
