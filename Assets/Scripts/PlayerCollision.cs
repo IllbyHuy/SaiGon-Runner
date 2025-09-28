@@ -22,5 +22,9 @@ public class PlayerCollision : MonoBehaviour
         {
             gameManager.GameWin();
         }
+        else if (collision.CompareTag("Traps"))
+        {
+            gameManager.GameOver();
+        }
     }
 }
