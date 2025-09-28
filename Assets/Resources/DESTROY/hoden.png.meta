@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: dc9b55134ef8be84ca71b1237155524b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 534173262759359819
+    second: hoden_0
+  - first:
+      213: -1280675415888714492
+    second: hoden_1
+  - first:
+      213: -6061412159771613779
+    second: hoden_2
+  - first:
+      213: 3280602657546849780
+    second: hoden_3
+  - first:
+      213: 2772783754503221529
+    second: hoden_4
+  - first:
+      213: -326624597677642013
+    second: hoden_5
+  - first:
+      213: 136664628590707719
+    second: hoden_6
+  - first:
+      213: -5343631419776666111
+    second: hoden_7
+  - first:
+      213: 4845971701268868920
+    second: hoden_8
+  - first:
+      213: 3046234430482084857
+    second: hoden_9
+  - first:
+      213: -1052265563077137404
+    second: hoden_10
+  - first:
+      213: -663695727929724809
+    second: hoden_11
+  - first:
+      213: -3367706954389181001
+    second: hoden_12
+  - first:
+      213: -3486778437543414693
+    second: hoden_13
+  - first:
+      213: -8883329423304541571
+    second: hoden_14
+  - first:
+      213: 696858091448943451
+    second: hoden_15
+  - first:
+      213: 391530568874375025
+    second: hoden_16
+  - first:
+      213: 5464715173140969127
+    second: hoden_17
+  - first:
+      213: 7250841323917148783
+    second: hoden_18
+  - first:
+      213: 3091622348303924976
+    second: hoden_19
+  - first:
+      213: -6851716789969773571
+    second: hoden_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hoden_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 1024
+        height: 1523
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b45784790c3c96700800000000000000
+      internalID: 534173262759359819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hoden_1
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 1353
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 405a06b9e702a3ee0800000000000000
+      internalID: -1280675415888714492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hoden_2
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1325
+        width: 20
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da5649361c981eba0800000000000000
+      internalID: -6061412159771613779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hoden_3
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 1311
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fd48445cba078d20800000000000000
+      internalID: 3280602657546849780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hoden_4
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 1287
+        width: 8
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91173264228ea7620800000000000000
+      internalID: 2772783754503221529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hoden_5
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 1251
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3eee480b8a8977bf0800000000000000
+      internalID: -326624597677642013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hoden_6
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 1260
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 704828071c785e100800000000000000
+      internalID: 136664628590707719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hoden_7
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 875
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1067895198b97d5b0800000000000000
+      internalID: -5343631419776666111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hoden_8
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 855
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83fe9b55699504340800000000000000
+      internalID: 4845971701268868920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hoden_9
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 819
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f3f27b2316664a20800000000000000
+      internalID: 3046234430482084857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hoden_10
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 807
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40c2967ab0a9561f0800000000000000
+      internalID: -1052265563077137404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hoden_11
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 547
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 770fdc970441ac6f0800000000000000
+      internalID: -663695727929724809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hoden_12
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 376
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bd250c2e508341d0800000000000000
+      internalID: -3367706954389181001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hoden_13
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 330
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b54bbbb1c797c9fc0800000000000000
+      internalID: -3486778437543414693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hoden_14
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 279
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7a382594f218b480800000000000000
+      internalID: -8883329423304541571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hoden_15
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 287
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b53cba7fdbcbba900800000000000000
+      internalID: 696858091448943451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hoden_16
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 181
+        width: 112
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 177b67c5afefe6500800000000000000
+      internalID: 391530568874375025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hoden_17
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 98
+        width: 109
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a631c52f7196db40800000000000000
+      internalID: 5464715173140969127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hoden_18
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 279
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f620eca74c920a460800000000000000
+      internalID: 7250841323917148783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hoden_19
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 104
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fe705a4526a7ea20800000000000000
+      internalID: 3091622348303924976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hoden_20
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 107
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfb9548a1efc9e0a0800000000000000
+      internalID: -6851716789969773571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      hoden_0: 534173262759359819
+      hoden_1: -1280675415888714492
+      hoden_10: -1052265563077137404
+      hoden_11: -663695727929724809
+      hoden_12: -3367706954389181001
+      hoden_13: -3486778437543414693
+      hoden_14: -8883329423304541571
+      hoden_15: 696858091448943451
+      hoden_16: 391530568874375025
+      hoden_17: 5464715173140969127
+      hoden_18: 7250841323917148783
+      hoden_19: 3091622348303924976
+      hoden_2: -6061412159771613779
+      hoden_20: -6851716789969773571
+      hoden_3: 3280602657546849780
+      hoden_4: 2772783754503221529
+      hoden_5: -326624597677642013
+      hoden_6: 136664628590707719
+      hoden_7: -5343631419776666111
+      hoden_8: 4845971701268868920
+      hoden_9: 3046234430482084857
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
