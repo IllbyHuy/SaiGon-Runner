@@ -9,6 +9,13 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Button ExitButton;
     [SerializeField] private Button GuideButton;
 
+    [Header("Level Selection UI")]
+    [SerializeField] private Button Level1Button;
+    [SerializeField] private Button Level2Button;
+    [SerializeField] private Button Level3Button;
+    [SerializeField] private Button CloseButton;
+    [SerializeField] private GameObject LevelSelectionPanel;
+
     private void Start()
     {
         // Phát nhạc menu khi vào Main Menu
@@ -26,7 +33,7 @@ public class MainMenu : MonoBehaviour
         ChooseLevelButton.onClick.AddListener(() =>
         {
             PlayButtonSound();
-            // Logic choose level
+            ShowLevelSelection();
         });
 
         ExitButton.onClick.AddListener(() =>
@@ -40,6 +47,48 @@ public class MainMenu : MonoBehaviour
             PlayButtonSound();
             ScenesLoader.LoadScenes(ScenesLoader.Scene.GuideScene);
         });
+
+        if (Level1Button != null) Level1Button.onClick.AddListener(() => LoadLevel(1));
+        if (Level2Button != null) Level2Button.onClick.AddListener(() => LoadLevel(2));
+        if (Level3Button != null) Level3Button.onClick.AddListener(() => LoadLevel(3));
+        if (CloseButton != null) CloseButton.onClick.AddListener(CloseLevelSelection);
+    }
+
+    private void ShowLevelSelection()
+    {
+        if (LevelSelectionPanel != null)
+        {
+            LevelSelectionPanel.SetActive(true);
+        }
+    }
+
+    public void CloseLevelSelection()
+    {
+        if (LevelSelectionPanel != null)
+        {
+            LevelSelectionPanel.SetActive(false); // Ẩn Panel
+        }
+    }
+
+    public void LoadLevel(int levelIndex)
+    {
+        switch (levelIndex)
+        {
+            case 1:
+                ScenesLoader.LoadScenes(ScenesLoader.Scene.Map1);
+                break;
+            case 2:
+                ScenesLoader.LoadScenes(ScenesLoader.Scene.Map2);
+                break;
+            case 3:
+                ScenesLoader.LoadScenes(ScenesLoader.Scene.Map3);
+                break;
+            default:
+                ScenesLoader.LoadScenes(ScenesLoader.Scene.Map1);
+                break;
+        }
+        if (LevelSelectionPanel != null)
+            LevelSelectionPanel.SetActive(false);
     }
 
     #region AUDIO METHODS
@@ -65,7 +114,7 @@ public class MainMenu : MonoBehaviour
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
-            Application.Quit();
+        Application.Quit();
 #endif
     }
 }
