@@ -13,13 +13,19 @@ public class Player : MonoBehaviour
     private bool isRunning = false;
     private bool facingRight = true;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Audio tracking variables
+    private bool wasWalking = false;
+    private bool wasRunning = false;
+
     void Start()
     {
-
+        // Phát background music khi player start (nếu cần)
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.PlayBackgroundMusic();
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
         movement = Input.GetAxis("Horizontal");
@@ -37,11 +43,17 @@ public class Player : MonoBehaviour
         }
 
         //JUMP
-        if(Input.GetKeyDown(KeyCode.Space) && isGround)
+        if (Input.GetKeyDown(KeyCode.Space) && isGround)
         {
             Jump();
             isGround = false;
             animator.SetBool("Jump", true);
+
+            // Phát âm thanh nhảy
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.PlayJumpSound();
+            }
         }
 
         //RUN by SHIFT
@@ -49,28 +61,50 @@ public class Player : MonoBehaviour
         {
             isRunning = true;
             animator.SetBool("Run", true);
+
+            // Phát âm thanh chạy (chỉ khi bắt đầu chạy)
+            if (!wasRunning && AudioManager.instance != null)
+            {
+                AudioManager.instance.PlayRunSound();
+            }
+            wasRunning = true;
         }
         else
         {
             isRunning = false;
             animator.SetBool("Run", false);
+            wasRunning = false;
         }
 
         //WALK
         if (Mathf.Abs(movement) > 0f)
         {
             animator.SetFloat("Walk", 1f);
+
+            // Phát âm thanh đi bộ (chỉ khi bắt đầu đi và không chạy)
+            if (!wasWalking && !isRunning && isGround && AudioManager.instance != null)
+            {
+                // Note: Có thể cần thêm walkSound vào AudioManager nếu muốn
+                // AudioManager.instance.PlayWalkSound();
+            }
+            wasWalking = true;
         }
         else if (movement < .1f)
         {
             animator.SetFloat("Walk", 0f);
+            wasWalking = false;
         }
 
         //ATTACK
-        if
-            (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             animator.SetTrigger("Attack");
+
+            // Phát âm thanh tấn công (có thể cần thêm vào AudioManager)
+            // if (AudioManager.instance != null)
+            // {
+            //     AudioManager.instance.PlayAttackSound();
+            // }
         }
     }
 
@@ -101,12 +135,47 @@ public class Player : MonoBehaviour
                     break;
                 }
             }
-            
+
             // Chỉ set isGround = true khi có ground thực sự ở dưới và đang rơi xuống
             if (hasGroundBelow && rb.linearVelocity.y <= 0.1f)
             {
                 isGround = true;
                 animator.SetBool("Jump", false);
+
+                // Phát âm thanh landing khi chạm đất
+                if (AudioManager.instance != null)
+                {
+                    // Note: Cần thêm landSound vào AudioManager nếu có
+                    // AudioManager.instance.PlayLandSound();
+                }
+            }
+        }
+
+        // Xử lý collision với các objects khác
+        if (collision.gameObject.tag == "Enemy")
+        {
+            // Player bị enemy đánh
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.PlayPlayerHitSound();
+            }
+        }
+
+        if (collision.gameObject.tag == "Collectible" || collision.gameObject.tag == "Coin")
+        {
+            // Thu thập items
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.PlayCollectSound();
+            }
+        }
+
+        if (collision.gameObject.tag == "Train")
+        {
+            // Va chạm với tàu
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.PlayTrainSound();
             }
         }
     }
@@ -125,7 +194,7 @@ public class Player : MonoBehaviour
                     break;
                 }
             }
-            
+
             if (hasGroundBelow && rb.linearVelocity.y <= 0.1f)
             {
                 isGround = true;
@@ -143,4 +212,29 @@ public class Player : MonoBehaviour
         }
     }
 
+    // Trigger events for collectibles
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Collectible") || other.CompareTag("Coin"))
+        {
+            // Thu thập items
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.PlayCollectSound();
+            }
+            // Destroy item
+            Destroy(other.gameObject);
+        }
+
+        if (other.CompareTag("Enemy"))
+        {
+            // Player bị enemy đánh (trigger)
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.PlayPlayerHitSound();
+            }
+        }
+    }
+
+    
 }

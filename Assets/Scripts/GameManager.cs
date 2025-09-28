@@ -38,7 +38,11 @@ public class GameManager : MonoBehaviour
     }
     public void GameOver()
     {
-        
+        if (AudioManager.instance != null)
+        {
+            // Dừng background music và phát lost music
+            AudioManager.instance.PlayLostMusic();
+        }
         isGameOver = true;
         score = 0;
         gameOverUI.SetActive(true);
@@ -51,6 +55,11 @@ public class GameManager : MonoBehaviour
         gameWinUI.SetActive(true);
         Time.timeScale = 0f;
         finalScoreText.text = "Your score: " + score.ToString();
+        if (AudioManager.instance != null)
+        {
+            // Phát win music
+            AudioManager.instance.PlayWinMusic();
+        }
     }
     public void RestartGame()
     {

@@ -9,6 +9,10 @@ public class Train : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.left * speed * Time.deltaTime);
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.PlayTrainSound();
+        }
 
         // Khi ra khỏi màn hình bên trái thì reset lại bên phải
         if (transform.position.x < resetX)
