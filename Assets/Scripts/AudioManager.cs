@@ -12,6 +12,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip menuMusic;
     [SerializeField] private AudioClip win;
     [SerializeField] private AudioClip lost;
+    [SerializeField] private AudioClip trainSound;
+
 
     [Header("=== GAME SOUND EFFECTS ===")]
     [SerializeField] private AudioClip jumpSound;
@@ -19,7 +21,6 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip collectSound;
     [SerializeField] private AudioClip enemyHitSound;
     [SerializeField] private AudioClip playerHitSound;
-    [SerializeField] private AudioClip trainSound;
 
     [Header("=== UI SOUNDS ===")]
     [SerializeField] private AudioClip buttonClickSound;
@@ -40,15 +41,27 @@ public class AudioManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+            Debug.Log("✅ AudioManager created and set to DontDestroyOnLoad");
         }
         else
         {
+            Debug.Log("❌ AudioManager duplicate destroyed!");
             Destroy(gameObject);
         }
     }
 
     void Start()
     {
+        // Debug checks
+        Debug.Log("=== AUDIO MANAGER DEBUG ===");
+        Debug.Log("MusicSource: " + (musicSource != null ? "OK" : "NULL"));
+        Debug.Log("SFXSource: " + (sfxSource != null ? "OK" : "NULL"));
+        Debug.Log("UISource: " + (uiSource != null ? "OK" : "NULL"));
+        Debug.Log("BackgroundMusic: " + (backgroundMusic != null ? "OK" : "NULL"));
+        Debug.Log("MenuMusic: " + (menuMusic != null ? "OK" : "NULL"));
+        Debug.Log("Master Volume: " + masterVolume);
+        Debug.Log("Music Volume: " + musicVolume);
+
         // Phát nhạc nền khi bắt đầu
         PlayBackgroundMusic();
     }
@@ -76,11 +89,9 @@ public class AudioManager : MonoBehaviour
         {
             musicSource.clip = menuMusic;
             musicSource.loop = true;
-            musicSource.time = 19f; // bắt đầu phát từ giây thứ 19
             musicSource.Play();
         }
     }
-
 
     public void PlayWinMusic()
     {
@@ -127,14 +138,14 @@ public class AudioManager : MonoBehaviour
         PlaySFX(collectSound);
     }
 
-    public void PlayEnemyHitSound()
-    {
-        PlaySFX(enemyHitSound);
-    }
-
     public void PlayTrainSound()
     {
         PlaySFX(trainSound);
+    }
+
+    public void PlayEnemyHitSound()
+    {
+        PlaySFX(enemyHitSound);
     }
 
     public void PlayPlayerHitSound()
