@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEditor.PackageManager.UI;
 
 public class MainMenu : MonoBehaviour
 {
@@ -9,33 +8,50 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Button ChooseLevelButton;
     [SerializeField] private Button ExitButton;
     [SerializeField] private Button GuideButton;
+
+    [Header("Level Selection UI")]
     [SerializeField] private Button Level1Button;
     [SerializeField] private Button Level2Button;
     [SerializeField] private Button Level3Button;
     [SerializeField] private Button CloseButton;
     [SerializeField] private GameObject LevelSelectionPanel;
+
+    private void Start()
+    {
+        // Phát nhạc menu khi vào Main Menu
+        PlayMenuMusic();
+    }
+
     private void Awake()
     {
-        PlayButton.onClick.AddListener(() => {
+        PlayButton.onClick.AddListener(() =>
+        {
+            PlayButtonSound();
             ScenesLoader.LoadScenes(ScenesLoader.Scene.Map1);
         });
 
-        ChooseLevelButton.onClick.AddListener(() => {
+        ChooseLevelButton.onClick.AddListener(() =>
+        {
+            PlayButtonSound();
             ShowLevelSelection();
         });
 
-        ExitButton.onClick.AddListener(() => { 
-            Application.Quit();
+        ExitButton.onClick.AddListener(() =>
+        {
+            PlayButtonSound();
+            ExitGame();
         });
 
-        GuideButton.onClick.AddListener(() => { 
+        GuideButton.onClick.AddListener(() =>
+        {
+            PlayButtonSound();
             ScenesLoader.LoadScenes(ScenesLoader.Scene.GuideScene);
         });
 
-        Level1Button.onClick.AddListener(() => LoadLevel(1));
-        Level2Button.onClick.AddListener(() => LoadLevel(2));
-        Level3Button.onClick.AddListener(() => LoadLevel(3));
-        CloseButton.onClick.AddListener(CloseLevelSelection);
+        if (Level1Button != null) Level1Button.onClick.AddListener(() => LoadLevel(1));
+        if (Level2Button != null) Level2Button.onClick.AddListener(() => LoadLevel(2));
+        if (Level3Button != null) Level3Button.onClick.AddListener(() => LoadLevel(3));
+        if (CloseButton != null) CloseButton.onClick.AddListener(CloseLevelSelection);
     }
 
     private void ShowLevelSelection()
@@ -71,7 +87,34 @@ public class MainMenu : MonoBehaviour
                 ScenesLoader.LoadScenes(ScenesLoader.Scene.Map1);
                 break;
         }
-        LevelSelectionPanel.SetActive(false);
+        if (LevelSelectionPanel != null)
+            LevelSelectionPanel.SetActive(false);
+    }
+
+    #region AUDIO METHODS
+    private void PlayButtonSound()
+    {
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.PlayButtonClickSound();
+        }
+    }
+
+    private void PlayMenuMusic()
+    {
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.PlayMenuMusic();
+        }
+    }
+    #endregion
+
+    private void ExitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
     }
 }
-

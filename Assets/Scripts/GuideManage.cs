@@ -1,4 +1,4 @@
-
+﻿
 using UnityEngine;
 using UnityEngine.UI;   
 
@@ -11,6 +11,11 @@ public class GuideManage : MonoBehaviour
         BackButton.onClick.AddListener(() =>
         {
             ScenesLoader.LoadScenes(ScenesLoader.Scene.MainMenuScenes);
+            // Phát nhạc menu khi vào Main Menu
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.PlayMenuMusic();
+            }
         });
     }
     }
