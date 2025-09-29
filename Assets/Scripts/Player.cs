@@ -16,6 +16,9 @@ public class Player : MonoBehaviour
     // Audio tracking variables
     private bool wasWalking = false;
     private bool wasRunning = false;
+    
+    // Fly cheat reference
+    private FlyCheat flyCheat;
 
     void Start()
     {
@@ -24,10 +27,19 @@ public class Player : MonoBehaviour
         {
             AudioManager.instance.PlayBackgroundMusic();
         }
+        
+        // Lấy reference đến FlyCheat component
+        flyCheat = GetComponent<FlyCheat>();
     }
 
     void Update()
     {
+        // Kiểm tra nếu đang ở chế độ bay thì không xử lý input bình thường
+        if (flyCheat != null && flyCheat.IsFlyModeActive())
+        {
+            return;
+        }
+        
         movement = Input.GetAxis("Horizontal");
 
         //FLIP
@@ -109,6 +121,12 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // Kiểm tra nếu đang ở chế độ bay thì không xử lý movement bình thường
+        if (flyCheat != null && flyCheat.IsFlyModeActive())
+        {
+            return;
+        }
+        
         float speed = isRunning ? runSpeed : moveSpeed;
         rb.linearVelocity = new Vector2(movement * speed, rb.linearVelocity.y);
     }
@@ -140,23 +158,7 @@ public class Player : MonoBehaviour
         }
 
         // Xử lý collision với các objects khác
-        if (collision.gameObject.tag == "Enemy")
-        {
-            // Player bị enemy đánh
-            if (AudioManager.instance != null)
-            {
-                AudioManager.instance.PlayPlayerHitSound();
-            }
-        }
 
-        if (collision.gameObject.tag == "Collectible" || collision.gameObject.tag == "Coin")
-        {
-            // Thu thập items
-            if (AudioManager.instance != null)
-            {
-                AudioManager.instance.PlayCollectSound();
-            }
-        }
 
         if (collision.gameObject.tag == "Train")
         {
@@ -198,26 +200,9 @@ public class Player : MonoBehaviour
         }
     }
 
-    // Trigger events for collectibles
+    // Trigger events
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Collectible") || other.CompareTag("Coin"))
-        {
-            // Thu thập items
-            if (AudioManager.instance != null)
-            {
-                AudioManager.instance.PlayCollectSound();
-            }
-            Destroy(other.gameObject);
-        }
 
-        if (other.CompareTag("Enemy"))
-        {
-            // Player bị enemy đánh (trigger)
-            if (AudioManager.instance != null)
-            {
-                AudioManager.instance.PlayPlayerHitSound();
-            }
-        }
     }
 }

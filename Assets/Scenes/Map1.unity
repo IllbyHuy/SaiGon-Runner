@@ -2140,7 +2140,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -47.722412, y: -1.6490097, z: -10.61}
+  m_LocalPosition: {x: -48.559177, y: -1.6490097, z: -10.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2369,7 +2369,7 @@ Transform:
   m_GameObject: {fileID: 530291021}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -47.722412, y: -1.6490097, z: -10.61}
+  m_LocalPosition: {x: -48.559177, y: -1.6490097, z: -10.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12563,6 +12563,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7800995489194754276, guid: 7066dd6671c12544c85ddd36dd720310, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6591228139356919996}
+    - targetCorrespondingSourceObject: {fileID: 7800995489194754276, guid: 7066dd6671c12544c85ddd36dd720310, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6591228139356919997}
   m_SourcePrefab: {fileID: 100100000, guid: 7066dd6671c12544c85ddd36dd720310, type: 3}
 --- !u!1 &6591228139356919995 stripped
 GameObject:
@@ -12581,6 +12584,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 768229a91b27e394499dca7e380c39f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCollision
+--- !u!114 &6591228139356919997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6591228139356919995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90af9d91094324e499470d08fa1ea503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlyCheat
+  flySpeed: 8
+  flyHeight: 5
+  cheatKeys: 75000000690000006f000000
 --- !u!1001 &7620565476266196264
 PrefabInstance:
   m_ObjectHideFlags: 0
