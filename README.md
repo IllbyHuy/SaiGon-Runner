@@ -31,9 +31,10 @@ cd SaiGon-Runner
 - Dùng các nút A, D , mũi tên qua phải qua trái để duy chuyển nhân vật.
 - Giữ Shift để nhân vật có thể chạy.
 - Nhấn space để nhảy.
+- Cheat case key : U + I + O.
 ### 6. Mô tả game play
 - Các vật phẩm trong game bao gồm: Đồng xu, Spike-trap, Bear-trap, fire-trap, cờ. 
-- Điều khiển nhân vật đi qua nóc của các tòa nhà nhặt các đồng tiền để cộng điểm.
+- Điều khiển nhân vật đi qua nóc của các tòa nhà nhặt các đồng xu để cộng điểm.
 - Ngoài việc té xuống các tòa nhà, nhân vật chạm vào trap sẽ bị game over.
 - Màng chơi được hoàn thành nếu nhân vật chạm vào cờ được set up ở cuối mỗi map.
 - Màng hình game win sẽ hiện ra với tổng số điểm mà người chơi đạt được.  
